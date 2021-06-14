@@ -1,0 +1,4 @@
+[submodule "Customizable-Backpacks.wiki"]
+	path = Customizable-Backpacks.wiki
+	url = https://github.com/Wolfrite-Minecraft/Customizable-Backpacks.wiki.git
+	branch = master

@@ -375,5 +375,6 @@ run
 # Files from Forge MDK
 forge*changelog.txt
 
-# Additional FOrge Files
+# Additional Ignored Folders
 Forge Files
+libs

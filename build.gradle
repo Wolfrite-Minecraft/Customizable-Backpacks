@@ -7,14 +7,15 @@ buildscript {
         classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '4.1.+', changing: true
     }
 }
+
 apply plugin: 'net.minecraftforge.gradle'
 // Only edit below this line, the above code adds and enables the necessary things for Forge to be setup.
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
-version = '1.0'
-group = 'com.yourname.modid' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = 'modid'
+version = '0.0.1.0'
+group = 'Wolfrite.andr9528.customizablebackpacks' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+archivesBaseName = 'customizablebackpacks'
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(8) // Mojang ships Java 8 to end users, so your mod should target Java 8.
 
@@ -138,10 +139,11 @@ dependencies {
     // that the dep is a ForgeGradle 'patcher' dependency. And it's patches will be applied.
     // The userdev artifact is a special name and will get all sorts of transformations applied to it.
     minecraft 'net.minecraftforge:forge:1.16.5-36.1.0'
+     
+    runtimeOnly fg.deobf("curse.maven:jei-3345971:3345971")    
+    runtimeOnly fg.deobf("curse.maven:modular-routers-3251933:3251933")
 
-     //JEI
-    runtimeOnly fg.deobf("curse.maven:jei-3345971:3345971")
-
+    compileOnly fg.deobf("curse.maven:mekanism-3206392:3206392")
     runtimeOnly fg.deobf("curse.maven:mekanism-3206392:3206392")
 
     // You may put jars on which you depend on in ./libs or you may define them like so..
